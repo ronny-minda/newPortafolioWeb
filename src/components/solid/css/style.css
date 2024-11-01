@@ -1,0 +1,112 @@
+:root {
+    --main-bg-color: lightblue; /* Valor inicial de la variable CSS */
+    --x: 0;
+    --y: 0;
+}
+
+.hoverElemento {
+    opacity: 0.5;
+}
+
+.mober {
+    height: auto;
+    width: auto;
+}
+  
+.soltar {
+    height: 100px;
+    width: 100px;
+    border: 1px solid red;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    background-color: #f1f2ff;
+    border: 1px solid #fff;
+    display: flex;
+
+    .asideL {
+        height: 100%;
+        width: 130px;
+        background-color: #e5e7ff;
+        border: 1px solid #fff;
+    }
+    .conteCenter {
+        height: 100%;
+        width: calc(100% - 260px);
+        background-color: #bec1e0;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .conteHtml {
+            height: calc(100% - 50px);
+            width: calc(100% - 50px);
+            background-color: red;
+        }
+    }
+    .asideR {
+        height: 100%;
+        width: 130px;
+        background-color: #e5e7ff;
+        border: 1px solid #fff;
+
+        .navR {
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px;
+            margin-bottom: 4px;
+
+            button {
+                padding: 2px 4px;
+                /* background-color: aqua; */
+                font-size: 10px;
+                margin: 3px 5px;
+                color: var(--text-color-1);
+            }
+        }
+
+        .conteR {
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: calc(100% - 41px);
+            width: 100%;
+
+            span {
+                color: var(--text-color-1);
+                /* font-weight: bold; */
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                font-size: 12px;
+            }
+            ul {
+                /* background-color: red; */
+                padding: 0 8px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+    
+                li {
+                    border-radius: 2px;
+                    padding: 5px;
+                    margin: 5px;
+                    border: 1px solid #fff;
+                    font-size: 13px;
+                    color: var(--text-color-1);
+                    cursor: pointer;
+                    /* font-weight: bold; */
+                    transition: 0.5s;
+                }
+                li:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+        
+    }
+}

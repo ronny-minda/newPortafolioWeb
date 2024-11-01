@@ -1,0 +1,78 @@
+---
+import Logo from "../svg/logo.astro";
+import { Box, Home, User, Settings, Server, ServerCog, Database } from "lucide-astro"
+
+const nav = [
+    {Ico: Home, href: "/dasboard"},
+    {Ico: Server, href: "/dasboard/front-end"},
+    {Ico: ServerCog, href: "/dasboard/back-end"},
+    {Ico: Database, href: "/dasboard/base-de-datos"},
+    {Ico: Box, href: "/dasboard/construir"},
+    {Ico: Settings, href: "/dasboard/configuracion"},
+]
+---
+
+<header class="sonbra">
+    <div class="ar">
+        <a href="/" class="logo" transition:name="logo">
+            <Logo animacion={true} />
+        </a>
+    </div>
+    <div class="ab">
+        {
+            nav.map((value) => {
+                const {Ico, href} = value
+                return (
+                    <a href={href} class="ico boton1 border1"><Ico class="icono" /></a>
+                )
+            })
+        }
+    </div>
+</header>
+
+<style>
+    header {
+        border-radius: 0 20px 20px 0;
+        height: 100vh;
+        width: 50px;
+        /* background-color: red; */
+
+        .ar {
+            width: 100%;
+            height: 10%;
+            /* background-color: blueviolet; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0 20px 0 0;
+            
+            .logo {
+                height: 30px;
+                width: 30px;
+                /* background-color: blue; */
+            }
+        }
+        .ab {
+            height: 90%;
+            width: 100%;
+            /* background-color: brown; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            .ico {
+                padding: 4px;
+                margin: 10px 0;
+                height: 30px;
+                width: 30px;
+                transform: scale(1);
+                transition: 0.5s;
+                /* background-color: aqua; */
+            }
+            .ico:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+</style>

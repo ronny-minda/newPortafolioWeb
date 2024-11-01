@@ -1,0 +1,94 @@
+---
+import DasboardLayout from "../../layouts/dasboardLayout.astro";
+import FrontEnd from "../../components/solid/frontEnd";
+import { Box, Home, User, Settings, Server, ServerCog, Database } from "lucide-astro"
+
+const nav = [
+    {Ico: Home, href: "/dasboard", name: "Home"},
+    {Ico: Server, href: "/dasboard/front-end", name: "FrontEnd"},
+    {Ico: ServerCog, href: "/dasboard/back-end", name: "BackEnd"},
+    {Ico: Database, href: "/dasboard/base-de-datos", name: "Base De Datos"},
+    {Ico: Box, href: "/dasboard/construir", name: "Construir"},
+    {Ico: Settings, href: "/dasboard/configuracion", name: "Configuracion"},
+]
+---
+
+<DasboardLayout description="" title="">
+    <h1 transition:name="das" class="textoStilo">Home</h1>
+    <p class="parrafo textoStilo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore exercitationem blanditiis laudantium iste deserunt eligendi maiores repudiandae amet qui? Atque debitis quae tenetur nesciunt eligendi alias, facilis illo totam explicabo!</p>
+
+    <div class="conteCart">
+        {
+            nav.map((value) => {
+                const { Ico, href, name } = value
+                return (
+                    <a href={href} class="cart border1 sonbra">
+                        <div class="ico"><Ico class="icono"/></div>
+                        <h3 class="textoStilo">{name}</h3>
+                        <p class="textoStilo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio praesentium aspernatur odit velit soluta ullam totam aperiam, itaque quae qui sunt culpa fugiat eligendi non nam ducimus consequuntur ipsam?</p>
+                    </a>
+                )
+            })
+        }
+    </div>
+</DasboardLayout>
+
+<style>
+    h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .parrafo {
+        margin: 30px 20px;
+        font-size: 15px;
+    }
+
+    .conteCart {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        /* position: relative; */
+        /* background-color: red; */
+        
+        .cart {
+            transition: 0.5s;
+            transform: scale(1);
+            padding: 10px;
+            position: relative;
+            width: 150px;
+            margin: 10px;
+            opacity: 1;
+            &:hover {
+                opacity: 0.6;
+                transform: scale(1.1);
+            }
+
+            .ico {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 30px;
+                width: 30px;
+                /* background-color: var(--text-color-marca-3); */
+                border-radius: 50%;
+                padding: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            h3 {
+                margin-bottom: 10px;
+                font-weight: bold;
+                font-size: 12px;
+                text-align: end;
+            }
+            p {
+                font-size: 9px;
+            }
+        }
+    }
+</style>

@@ -1,0 +1,55 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { ViewTransitions } from 'astro:transitions';
+import HeaderDasboard from '../components/dasboard/headerDasboard.astro';
+
+type Props = {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<ViewTransitions />
+	</head>
+
+	<body>
+		<HeaderDasboard />
+
+        <main>
+            <div class="scrollStyle conte sonbraDentro">
+                <slot />
+            </div>
+        </main>
+		<!-- <Footer/> -->
+	</body>
+</html>
+
+<style>
+    body {
+        overflow: hidden;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .conte {
+                height: 100%;
+                width: 100%;
+                padding: 15px;
+                border-radius: 10px;
+                border: 1px solid #fff;
+                overflow: auto;
+            }
+        }
+    }
+</style>

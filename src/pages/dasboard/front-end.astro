@@ -1,0 +1,20 @@
+---
+import DasboardLayout from "../../layouts/dasboardLayout.astro";
+// import FrontEnd1 from "../../components/solid/frontEnd";
+import FrontEnd2 from "../../components/solid/frontEnd2";
+---
+
+<DasboardLayout description="" title="">
+    <!-- <h1 transition:name="das" >Front End</h1> -->
+
+    <!-- <FrontEnd1 client:only="solid-js">
+        <div slot="fallback">Cargando...</div>
+    </FrontEnd1> -->
+    <FrontEnd2 client:only="solid-js">
+        <div slot="fallback">Cargando...</div>
+    </FrontEnd2>
+</DasboardLayout>
+
+<style>
+
+</style>

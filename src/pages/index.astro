@@ -1,0 +1,142 @@
+---
+import Logo from "../components/svg/logo.astro"
+import PageLayout from "../layouts/PageLayout.astro"
+import { Github, Linkedin, Mail, Phone } from 'lucide-astro'
+---
+
+<PageLayout description='' title='Ronny Minda Vera'>
+	<main>
+		<section class="hero">
+			<div>
+				<h1 class="textoStilo" transition:name="tituloUnit">RONNY MINDA VERA</h1>
+				<p class="prose textoStilo" >Tengo amplios conocimentos y experiencia en desarrollo web.</p>
+				<div class="prose textoStilo" ><b>Mail: </b>ronny.minda.vera@gmail.com</div>
+				<div class="conteRedes">
+					<a class="border1 sonbra" dato-titulo="GitHub" href="https://github.com/ronny-minda" target="_blank" rel="noopener noreferrer">
+						<Github class="icono" />
+					</a>
+					<a class="border1 sonbra" href="https://www.linkedin.com/in/ronnyminda/" target="_blank" rel="noopener noreferrer">
+						<Linkedin class="icono" />
+					</a>
+					<a class="border1 sonbra" href="tel:0993105654" target="_blank" rel="noopener noreferrer">
+						<Phone class="icono" />
+					</a>
+					<a class="border1 sonbra" href="mailto:ronny.michael.minda.vera@gmail.com" target="_blank" rel="noopener noreferrer">
+						<Mail class="icono" />
+					</a>
+				</div>
+			</div>
+			<a class="sonbra" href="/about" transition:name="perfil">
+				<img src="/img/ronnymindavera.webp" alt="Ronny Minda Vera">
+				<div class="svg">
+					<Logo animacion={false} />
+				</div>
+			</a>
+		</section>
+	</main>
+</PageLayout>
+
+<style>
+	main {
+
+		.hero {
+			width: 100%;
+			/* height: 400px; */
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			> * {
+    			&:first-child {
+      				/* background-color: lightblue; */
+					margin-right: 20px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+
+					h1 {
+						color: var(--text-color-1);
+						font-size: 40px;
+						font-weight: bold;
+						text-align: center;
+					}
+					p {
+						margin: 10px 0;
+						color: var(--text-color-2);
+					}
+					@media (width < 600px) {
+						h1 {
+							font-size: 35px;
+						}
+						p {
+							font-size: 15px;
+						}
+					}
+					.conteRedes {
+						margin-top: 10px;
+						height: 35px;
+						width: 100%;
+						/* background-color: red; */
+						display: flex;
+						justify-content: center;
+						margin-bottom: 15px;
+
+						a {
+							margin: 0 10px;
+							height: 100%;
+							width: 35px;
+							padding: 5px;
+							transform: scale(1);
+							transition: 0.5s transform;
+							/* background-color: blue; */
+						}
+					a:hover {
+							transform: scale(1.1);
+						}
+					}
+    			}
+
+    			&:last-child {
+      				/* background-color: lightgreen; */
+					width: 300px;
+					height: 300px;
+					border-radius: 50%;
+					position: relative;
+
+					img {
+						opacity: 1;
+						transition: 0.5s opacity;
+						height: 100%;
+						width: 100%;
+						border-radius: 50%;
+						object-fit: none;
+						object-position: top;
+					}
+					.svg {
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 100%;
+						width: 100%;
+						border-radius: 50%;
+						clip-path: circle(50% at 50% 50%);
+						/* background-color: red; */
+						opacity: 0;
+						transition: 0.5s opacity;
+					}
+    			}
+
+				&:last-child:hover {
+					img {
+						opacity: 0;
+					}
+					.svg {
+						opacity: 1;
+					}
+				}
+  			}
+		}
+	}
+
+</style>

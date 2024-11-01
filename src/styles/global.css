@@ -1,0 +1,151 @@
+:root {
+	--text-color-1: #464646;
+	--text-color-2: #757575;
+	--text-color-3: #bbbbbb;
+
+	--text-color-marca-1: #ff0000;
+	--text-color-marca-2: #ff3e3e;
+	--text-color-marca-3: #ff8f8f;
+}
+
+/* * {
+	border: 1px solid red;
+} */
+
+body {
+	/* background: #e0e0e0; */
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-image: linear-gradient(to right bottom, #ffffff, #f7f8fd, #eef1fb, #e3eafa, #d7e4f8); */
+	/* background-color: #e3e9f7; */
+	background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(215,228,248,1) 32%);
+
+	
+	main {
+		width: 100%;
+		padding: 0 70px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+.scrollStyle::-webkit-scrollbar {
+	width: 10px;
+}
+
+.scrollStyle::-webkit-scrollbar-track {
+	background: #b6c9e7;
+}
+.scrollStyle::-webkit-scrollbar-thumb {
+	background-color: #6e82a1;
+	border-radius: 20px;
+	border: 3px solid #b6c9e7;
+}
+.scrollStyle::-webkit-scrollbar-thumb:hover {
+	background-color: #4c6181;
+}
+/* 
+[data] {
+	left: attr(data)px;
+} */
+
+/* [dato-titulo] {
+	position: relative;
+	
+	&::after {
+		content: attr(dato-titulo);
+		display: none;
+		height: auto;
+		width: auto;
+		padding: 2px 5px;
+		border-radius: 3px;
+		background: linear-gradient(145deg, #c2cddf 0%, #edf7ff 80%, #fff);
+		border: 1px solid #fff;
+		background-position: -150px;
+		background-repeat: no-repeat;
+		box-shadow: 4px 4px 8px #b7c2d3, -4px -4px 8px #f7ffff;
+		position: absolute;
+		bottom: 120%;
+		left: 50%;
+		font-size: 12px;
+		transform: translate(-50%);
+		background-color: #fff;
+		opacity: 0;
+		color: var(--text-color-2);
+		font-weight: 700;
+		transition-behavior: allow-discrete;
+		transition: 0.5s opacity;
+		transition-property: display;
+		transition-delay: 2s;
+		animation: name duration timing-function delay iteration-count direction fill-mode;
+	}
+}
+[dato-titulo]:hover {
+	position: relative;
+	
+	&::after {
+		opacity: 1;
+		background-position: 0px;
+		display: block;
+	}
+} */
+/* @keyframes uno {
+	0% {display: block;}
+	100% {display: none;}
+} */
+
+.icono {
+	height: 100%;
+	width: 100%;
+	stroke: var(--text-color-marca-3);
+}
+
+.boton1 {
+	box-shadow: 4px 4px 8px #b7c2d3, -4px -4px 8px #f7ffff, inset 4px 4px 8px #b7c2d300, inset -4px -4px 8px #f7ffff00;
+	/* background: linear-gradient(145deg, #c2cddf99 0%, #edf7ff 80%); */
+	/* background-position: 150px; */
+	/* background-repeat: no-repeat; */
+	border: 1px solid #fff;
+	transition: 0.1s;
+}
+.boton1:hover {
+	/* background: linear-gradient(145deg, #c2cddf99 0%, #edf7ff 80%); */
+	/* background-position: 0px; */
+	box-shadow: 4px 4px 8px #b7c2d3, -4px -4px 8px #f7ffff, inset 4px 4px 8px #b7c2d300, inset -4px -4px 8px #f7ffff00;
+}
+.boton1:active {
+	box-shadow: 4px 4px 8px #b7c2d300, -4px -4px 8px #f7ffff00, inset 4px 4px 8px #b7c2d3, inset -4px -4px 8px #f7ffff;
+}
+
+.textoStilo{
+	background: linear-gradient(to right, var(--text-color-2) 0%, var(--text-color-1) 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.border1 {
+	border-radius: 10px;
+}
+
+.sonbra {
+	border: 1px solid white;
+	/* box-shadow:  7px 7px 7px #cfd4e1, */
+             /* -7px -7px 7px #f7feff; */
+
+			 /* border-radius: 50px; */
+/* background: #e0e0e0; */
+box-shadow:  4px 4px 8px #b7c2d3,
+             -4px -4px 8px #f7ffff;
+}
+
+.sonbraDentro {
+	box-shadow: 4px 4px 8px #b7c2d300, -4px -4px 8px #f7ffff00, inset 4px 4px 8px #b7c2d3, inset -4px -4px 8px #f7ffff;
+
+}
+
+
+
+/* https://neumorphism.io/#e0e0e0
+#d7e4f8
+40px */
